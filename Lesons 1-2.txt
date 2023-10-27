@@ -1,0 +1,55 @@
+https://itproger.com/ua/course/sql
+00:00
+
+
+
+---------------------------------------------
+---------------------------------------------
+
+1. MAMP
+https://www.mamp.info/en/downloads/
+
+- Встановлюємо  MAMP 
+- відкриваємо MAMP
+- нажимаємо  WebStart
+
+phpMyAdmin
+
+вкладка SQL
+
+Створити базу данних------------------------
+
+CREATE DATABASE shop
+--------------------------------------------
+
+Видалити  базу данних ----------------------
+
+DROP DATABASE shop;
+--------------------------------------------
+
+
+Створюємо табличку ------------------------
+
+CREATE TABLE people(
+    id INT NOT NULL AUTO_INCREMENT,
+	 name VARCHAR(30),
+     email VARCHAR(40),
+     bio TEXT,
+     birth DATE,
+  
+     PRIMARY KEY(id)   
+);
+------------------------------------------
+
+
+Додаємо нове поле pass в таблицю people з типом VARCHAR(32) - 
+довжина 32 символа
+
+ALTER TABLE people ADD pass VARCHAR(32);
+-----------------------------------------
+
+
+Видаляємо поле pass з таблиці people
+
+ALTER TABLE people DROP COLUMN pass;
+--------------------------------------------
