@@ -1,0 +1,63 @@
+https://www.youtube.com/watch?v=E1nHIP3QTx4
+
+10:27
+
+------------------------------------------
+INSERT INTO `orders`
+(
+    `orderNumber`, 
+    `shopId`, 
+    `personId`
+) 
+VALUES 
+(0001,2,4),
+(0001,4,1),
+(0001,2,5),
+(0001,3,3),
+(0001,1,2),
+(0001,2,4)
+;
+-----------------------
+
+-------------------------------------------------------------
+SELECT orders.orderNumber, people.name, people.email 
+FROM people
+
+INNER JOIN 
+
+orders
+
+ON
+
+people.id=orders.personId
+
+ORDER BY orderNumber DESC
+
+...................................................
+вибрати orderNumber з orders   name з people    email з  people
+
+з  people
+
+доповнити з (INNER JOIN)
+
+orders
+
+де
+
+people.id=orders.personId
+
+
+ORDER BY (сортуємо) orderNumber (по ) DESC (у зворотньому напрямку)
+
+
+-------------------------------------------------------------
+
+SELECT shop.title, people.name, people.email 
+FROM people
+
+INNER JOIN orders ON people.id=orders.personId
+INNER JOIN shop ON shop.id=orders.shopId
+
+
+ORDER BY orderNumber DESC
+;

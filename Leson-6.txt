@@ -1,0 +1,44 @@
+https://www.youtube.com/watch?v=0sXRiJ4anQ8
+04:35
+
+-----------------------------------------------------
+
+індекси
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+CREATE INDEX NIndex ON people(name);
+
+Створити індекс з назвою NIndex в таблиці people для поля name
+-----------------------------------------------------
+
+ ----------------------------------------------------
+ SELECT `name` FROM `people`
+ 
+ вибираємо все по полю  name (бо внього є індекс) за таблиці people
+ ----------------------------------------------------
+
+-----------------------------------------------------
+ DROP INDEX NIndex ON people;
+ 
+ видаляюмо індекс NIdex з  таблиці people
+ ----------------------------------------------------
+
+
+-------------------------------------------------------
+CREATE TABLE orders(
+    id INT NOT NULL AUTO_INCREMENT,
+    orderNumber INT,
+    shopId INT,
+    personId INT,
+    date_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY(shopID) REFERENCES shop(id),
+    FOREIGN KEY(personID) REFERENCES people(id),
+    
+    PRIMARY  KEY(id)
+);
+
+REFERENCES - має зв'язок
+
